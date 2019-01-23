@@ -16,4 +16,7 @@ private _loginUrl = 'http://localhost:3000/api/login';
 loginUser(user) {
   return this.http.post<any>(this._loginUrl, user)
 }
+loggedIn(){
+  return !!localStorage.getItem('token')
+}
 }
